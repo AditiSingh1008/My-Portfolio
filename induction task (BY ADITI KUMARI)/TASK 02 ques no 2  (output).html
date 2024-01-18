@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Bgcolor</title>
+    <style>
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #007bff;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        // Get the necessary HTML elements
+        const circle = document.querySelector('.circle');
+        const box = document.querySelector('.box');
+        const circleBtn = document.getElementById('bg-circle-btn');
+        const boxBtn = document.getElementById('bg-box-btn');
+
+        // Add click event listeners to the buttons
+        circleBtn.addEventListener('click', changeCircleColor);
+        boxBtn.addEventListener('click', changeBoxColor);
+
+        function changeCircleColor() {
+            const randomColor = getRandomColor();
+            circle.style.backgroundColor = randomColor;
+        }
+
+        function changeBoxColor() {
+            const randomColor = getRandomColor();
+            box.style.backgroundColor = randomColor;
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</head>
+<body>
+    <h1>Change Background Color of Box & Circle</h1>
+    <div class="container">
+  <div class="box">
+    <div class="circle"></div>
+  </div>
+  <div class="buttons">
+    <button id="bg-circle-btn">Change Circle Color</button>
+    <button id="bg-box-btn">Change Box Color</button>
+  </div>
+</div>
+</body>
+</html>

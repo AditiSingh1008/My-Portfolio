@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation</title>
+    <style>
+        h1{
+            text-align: center;
+            font-family: cursive;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #007bff;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+        #rotate-left-btn{
+            background-color: #728FCE;
+        }
+        #rotate-right-btn{
+            background-color: #98AFC7;
+        }
+    </style>
+    <script>
+        const container = document.querySelector('.container');
+        const box = document.querySelector('.box');
+        const circle = document.querySelector('.circle');
+        const rotateLeftBtn = document.querySelector('#rotate-left-btn');
+        const rotateRightBtn = document.querySelector('#rotate-right-btn');
+
+        let rotateAngle = 0;
+
+        rotateLeftBtn.addEventListener('click', () => {
+        rotateAngle -= 30;
+        box.style.transform = `rotate(${rotateAngle}deg)`;
+        circle.style.transform = `rotate(-${rotateAngle}deg)`;
+        });
+
+        rotateRightBtn.addEventListener('click', () => {
+        rotateAngle += 30;
+        box.style.transform = `rotate(${rotateAngle}deg)`;
+        circle.style.transform = `rotate(-${rotateAngle}deg)`;
+        });
+    </script>
+</head>
+<body>
+    <h1>Orientation of Circle and Box</h1>
+    <div class="container">
+        <div class="box">
+            <div class="circle"></div>
+        </div>
+    <div class="buttons">
+        <button id="rotate-left-btn">Rotate Left</button>
+        <button id="rotate-right-btn">Rotate Right</button>
+    </div>
+    </div>
+</body>
+</html>

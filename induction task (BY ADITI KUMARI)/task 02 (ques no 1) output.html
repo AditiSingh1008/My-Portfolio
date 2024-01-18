@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rotate Circle and Box</title>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform 0.3s ease;
+		}
+
+		.circle {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			border-radius: 50%;
+			transition: transform 0.3s ease;
+		}
+
+		.rotate-left-btn:hover + .box .circle,
+		.rotate-right-btn:hover + .box .circle {
+			transform: rotate(-90deg);
+		}
+
+		.rotate-right-btn:hover + .box .circle {
+			transform: rotate(90deg);
+		}
+
+		.rotate-left-btn:hover + .box {
+			transform: rotate(-90deg);
+		}
+
+		.rotate-right-btn:hover + .box {
+			transform: rotate(90deg);
+		}
+	</style>
+</head>
+<body>
+	<button class="rotate-left-btn">Rotate Left</button>
+	<button class="rotate-right-btn">Rotate Right</button>
+	<div class="box">
+		<div class="circle"></div>
+	</div>
+</body>
+</html>
