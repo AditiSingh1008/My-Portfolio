@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> City- Name </title>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      
+    }
+    body{
+    /*  background-color: #f0f0f0;*/
+      background-image: linear-gradient(#033747,#012730);
+    }
+
+    .container{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+      width: 100%;
+      
+    }
+  
+
+    .card{
+      display: flex;
+      /* flex-direction: row; */
+      width: 550px;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      background-color: #f0f0f0;
+      border-radius:8px;
+      overflow: hidden;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+      margin:40px;
+      padding-top: 70px;
+      border: 2px solid black;
+      
+    }
+
+    .card img{
+      width:100%;
+      height:auto; 
+      background-size:cover;
+      background-position: centre; 
+
+    }
+
+    .card-content{
+      padding: 16px;
+
+    }
+
+    .card-content h2{
+       font: size 28px;
+       margin-bottom: 8px;
+  
+    }
+
+    .card-content p{
+           color: #666;
+           font-size: 15px;
+           line-height: 1.5;     
+    }
+
+    .card-content .btn{
+       display: inline-block;
+       padding:8px 16px;
+       background-color: #333;
+       text-decoration: none;
+       border-radius: 4px;
+       margin-top: 16px;
+       color:#fff;
+
+    }
+
+    nav{
+            width:100%;
+            height:75px;
+            line-height: 75px;
+            padding:0px 100px;
+            position:fixed;
+            background: blue; 
+            background-image: linear-gradient(#033747,#012730);
+         /* display: flex; */
+        
+        }
+       
+        nav .logo p{
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            float:right;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor:pointer;
+            width: 20%;
+            padding-left: 0px
+
+        }
+
+        nav .logo p:hover
+        {
+            color:aqua;
+            transition: all 0.4s ease 0s;
+        }
+
+        .card-content .btn:hover{
+          color:aqua;
+            transition: all 0.4s ease 0s;
+        }
+  </style>
+</head>
+<body>
+  <div class="main-div"></div>
+  <nav >
+    <div class="logo">
+        <p> KOLKATA</p>
+    </div>
+  </nav>
+
+  <div class=" container con ">
+    <div class="card car"> 
+      <img src=" ">
+      <div class="card-content">
+        <h2>Places to be Visited</h2>
+        <p>Kolkata (formerly Calcutta) is the capital of India's West Bengal state .The Port of Kolkata is India's oldest operating port and its sole major riverine port. The city, nicknamed the "City of Joy" is widely regarded for its educational and cultural heritage and six Nobel Laureates have been associated with the city.</p>
+        <a href="" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="card car"> 
+      <img src=" ">
+      <div class="card-content">
+        <h2>Famous-Food</h2>
+        <p>kolkata is famous for an array of things, and one of the most important of them is food. The mouth-watering Rosogullas, Chomchom, and Rasamalai, the super tasty Sorshe Ilish and Chingri Macher Malai Curry and but a few of the mouthwatering and tempting food of the highly illustrated and exquisite Bengali cuisine.</p>
+        <a href="" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="card car"> 
+      <img src=" ">
+      <div class="card-content">
+       <h2> Arts & Culture </h2>
+        <p>Kolkata remains at the vanguard of artistic movements in the country, and several artists' societies present annual shows. Kolkata is also a centre of traditional and contemporary music and dance.</p>
+        <a href="" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="card car"> 
+      <img src=" ">
+      <div class="card-content">
+        <h2> Hotels </h2>
+        <p>Hotels in Kolkata, India — Choose from a wide range of properties which Booking.com offers. Search now! Book your Hotel in Kolkata online. No reservation costs. Great rates. Hotels. Villas. Hostels. Motels. Great Choice. Apartments. Flight + Hotel.</p>
+       <a href="" class="btn">Read More</a>
+      </div>
+    </div>
+  </div>
+  <div>
+
+  
+</body>
+</html>
